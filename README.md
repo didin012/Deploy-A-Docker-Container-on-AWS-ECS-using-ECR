@@ -1,6 +1,13 @@
 # Deploy-A-Docker-Container-on-AWS-ECS-using-ECR
 A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application. It will be deployed in an AWS environment using ECS.
 
+## Infrastructure
+
+![image](https://github.com/didin012/Deploy-A-Docker-Container-on-AWS-ECS-using-ECR/assets/104528282/99ec96f7-ae34-4f2f-88ba-2664482748e6)
+
+I have used Python Flask for the dynamic web app. I also used Docker to build the image then pushed it into the ECR so that we will have access in AWS. in Elastic Container Registry, this is where you store the repository of your container. After that I used Amazon Elastic Container Service for the deployment of the web app on our cloud. We will be able to create task for the On-demand Auto-scaled EC2, where the app will run by creating clusters on ECS. The task definition will take care for the host port of the container and make sure you select the right container for running the task on our EC2. After creating all the task and applied it on the EC2 open up the public IPv4 address of the EC2 then add the exposed port of the container.
+
+
 ## Check if the app will run locally
 1. Open a virtualenv by installing<br>
 	```$ pip install --user virtualenv```<br>
